@@ -11,20 +11,21 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(239, 80, 41);
+    background:pink(239, 80, 41);
    margin: 0 auto;
+   margin-bottom: 20px;
     display: flex;
     padding: 10px;
 }
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: purple;
     flex: 1;
     margin: 0;
 }
 #nav-ul {
-    list-style-image: none;
+    list-style-image:none;
 }
 .nav-li {
     display: inline-block;
@@ -37,15 +38,20 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(245, 238, 219);
+    background:rgb(245, 238, 219);
     display: flex;
+    border:double;
+    border-color:plum;
+    border-radius:20px;
 }
 .sidebar {
     margin-right: 25px;
     padding: 10px;
 }
 .sidebar-img {
-    width: 200px;
+    width: 150px;
+    border-style:none;
+    border-radius:20px;
 }
 .content {
     flex: 1;
@@ -53,26 +59,25 @@ main {
 }
 
 /* portfolio styles */
-#interests {
-    border: 4px silver ridge;
-    padding: 8px;
-}
-h2, h3 {
-    margin: 0px;
-}
-/* portfolio styles */
   .content h1 {
-    color: black;
+     border-style:double;
+     border-color:#a874a8;
+     border-radius:10px;
+    color: black, 25, 25;
 }
 
 #portfolio {
+     background-color:pink;
     list-style-type: none;
-    padding-left: 0;
+    padding-left:0;
+    border:none;
+    border-radius:20px
 }
 
 #portfolio li {
-    background: #fff;
+    background:none;
     padding: 10px;
+    border-style:none;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -84,4 +89,12 @@ h2, h3 {
 #portfolio a {
     text-decoration: none;
     color: #454545;
+}
+/* portfolio styles */
+#interests {
+    border: 4px silver ridge;
+    padding: 8px;
+}
+h2, h3 {
+    margin: 0px;
 }
