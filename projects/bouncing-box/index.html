@@ -9,7 +9,8 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-image: url("https://fiftyflowers.com/cdn/shop/files/preserved-classic-pink-rose-wholesale-flowers-close-up_01942.webp?v=1696616940&width=800");
+			background-size:100%;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -22,6 +23,7 @@
 
 		.board {
 			height: 100vh;
+			background-color:pink;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -80,8 +82,14 @@
 				/* Your Code to Increase positionX by 10 HERE */
 				positionX = positionX + speed;
 				moveBoxTo(positionX);
-				if (positionX >boardWidth){
-					speed = speed*-1;
+				if (positionX > boardWidth){
+				// change direction of the box
+					speed = speed *-1;
+				}
+
+				if(positionX < 0){
+				// change speed to be positive
+					speed = speed *-1;
 				}
 
 
@@ -96,8 +104,19 @@
              // your code to increase the points variable by 1
 			 positionX = 0;
 			 points = points + 1; 
-			 speed= points +3
+			 speed = speed + 3;
              changeBoxText(points);
+
+			 if(speed > 0){
+				speed = speed + 3;
+			 }
+
+			 else if(speed < 0){
+				speed = speed - 3;
+			 }
+
+
+
 			};
 
 
